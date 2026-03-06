@@ -5,10 +5,24 @@ const allBtns = document.getElementById("allBtn");
 const openBtns = document.getElementById("openBtn");
 const closedBtns = document.getElementById("closedBtn");
 
+let searchInput = document.getElementById("searchInput");
+
 let allIssues = [];
 let openList = [];
 let closeList = [];
 
+
+searchInput.addEventListener("input", function(){
+
+    const searchText = searchInput.value.toLowerCase();
+
+    const filteredIssues = allIssues.filter(issue =>
+        issue.title.toLowerCase().includes(searchText)
+    );
+
+    loadDataDisplay(filteredIssues);
+
+})
 
 function buttonStyle(clicked){
     console.log(clicked)
@@ -33,6 +47,7 @@ function buttonStyle(clicked){
 }
 
 
+
 async function loadData(){
     const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     const data = await res.json()
@@ -52,7 +67,7 @@ function loadDataDisplay(dataResived) {
         console.log(colors)
         let div = document.createElement("div");
         div.innerHTML = `
-        <div class="p-5 rounded-md border-t-4 ${colors?'border-red-600' : 'border-green-600'} bg-white relative space-y-4">
+        <div class="p-5 rounded-md border-t-4 ${colors?'border-[#A855F7]' : 'border-green-600'} bg-white relative space-y-4">
                     <div class="flex justify-between items-center">
                         <img src="./assets/Open-Status.png" alt="" class="bg-[#CBFADB] p-1 rounded-full">
                         <h2 class="text-[#EF4444] bg-[#EF4444]/10 w-fit px-7 rounded-full">${text.priority}</h2>
