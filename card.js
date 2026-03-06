@@ -83,7 +83,7 @@ function loadDataDisplay(dataResived) {
                     </div>
                     <div class="w-full h-[2px] bg-[#E4E4E7] top-[65%] left-0"></div>
                     <h5 class="text-[#64748B]">#${text.id} by ${text.author}</h5>
-                    <h6 class="text-[#64748B]">1/15/2024</h6>
+                    <h6 class="text-[#64748B]">${text.createdAt}</h6>
                 </div>
         `;
         cardSection.appendChild(div)
