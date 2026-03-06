@@ -70,7 +70,7 @@ function loadDataDisplay(dataResived) {
         <div class="p-5 rounded-md border-t-4 ${colors?'border-[#A855F7]' : 'border-green-600'} bg-white relative space-y-4">
                     <div class="flex justify-between items-center">
                         <img src=${colors? "./assets/ClosedStatus.png" : "./assets/Open-Status.png"} alt="" class="${colors? "bg-[#ebcbfa88]" : "bg-[#CBFADB]"} p-1 rounded-full">
-                        <h2 class="text-[#EF4444] bg-[#EF4444]/10 w-fit px-7 rounded-full">${text.priority}</h2>
+                        <h2 class=" uppercase ${colors? "text-[#9CA3AF] bg-[#9CA3AF]/20" : "text-[#EF4444]"}  w-fit px-7 rounded-full">${text.priority}</h2>
                     </div>
                     <div>
                         <h2 class="font-semibold">${text.title}</h2>
@@ -82,7 +82,7 @@ function loadDataDisplay(dataResived) {
                         <p class="bg-[#FFF8DB] text-[#D97706] border-2 text-[11px] uppercase border-[#FDE68A] px-5 py-1 rounded-full"><i class="fa-solid fa-life-ring"></i> help wanted</p>
                     </div>
                     <div class="w-full h-[2px] bg-[#E4E4E7] top-[65%] left-0"></div>
-                    <h5 class="text-[#64748B]">#1 by john_doe</h5>
+                    <h5 class="text-[#64748B]">#${text.id} by ${text.author}</h5>
                     <h6 class="text-[#64748B]">1/15/2024</h6>
                 </div>
         `;
