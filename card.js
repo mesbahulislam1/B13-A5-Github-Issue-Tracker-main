@@ -64,12 +64,12 @@ function loadDataDisplay(dataResived) {
 
     for(let text of dataResived){
         let colors = text.status === "closed";
-        console.log(colors)
+        console.log(text)
         let div = document.createElement("div");
         div.innerHTML = `
         <div class="p-5 rounded-md border-t-4 ${colors?'border-[#A855F7]' : 'border-green-600'} bg-white relative space-y-4">
                     <div class="flex justify-between items-center">
-                        <img src="./assets/Open-Status.png" alt="" class="bg-[#CBFADB] p-1 rounded-full">
+                        <img src=${colors? "./assets/ClosedStatus.png" : "./assets/Open-Status.png"} alt="" class="${colors? "bg-[#ebcbfa88]" : "bg-[#CBFADB]"} p-1 rounded-full">
                         <h2 class="text-[#EF4444] bg-[#EF4444]/10 w-fit px-7 rounded-full">${text.priority}</h2>
                     </div>
                     <div>
