@@ -10,7 +10,7 @@ document.getElementById("login").addEventListener("click", ()=>{
     if (user == 'admin' && password == 'admin123') {
         window.location.assign("./home.html")
     }else{
-        alert("Invaild Info")
+        alert("Invaild information")
     }
 })
 
