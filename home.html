@@ -27,6 +27,7 @@
       }
     </style>
 <body class="bg-[#eceef0] ">
+    
     <header class="flex flex-wrap gap-5 bg-white justify-between items-center py-5 shadow px-11">
         <div class="flex items-center gap-3">
             <img src="./assets/github-logo.png" class="w-[40px]" alt="">
@@ -98,6 +99,25 @@
             </div>
         </div>
     </section>
+
+    <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_1" class="modal">
+  <div  class="modal-box">
+    <div id="modal_content">
+
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+    
 
     <script src="./card.js"></script>
 </body>
